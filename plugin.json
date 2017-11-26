@@ -1,0 +1,19 @@
+{
+  "name": "sitemap",
+  "version": "0.1.2",
+  "description": {
+    "en": "Sitemap",
+    "ru": "Sitemap",
+    "uk": "Sitemap"
+  },
+  "url": "https://github.com/pytsite/plugin-sitemap",
+  "author": {
+    "name": "Alexander Shepetko",
+    "email": "a@shepetko.com",
+    "url": "https://shepetko.com"
+  },
+  "requires": {
+    "packages": [],
+    "plugins": []
+  }
+}
