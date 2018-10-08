@@ -1,13 +1,13 @@
 """Sitemap Builder
 """
+__author__ = 'Oleksandr Shepetko'
+__email__ = 'a@shepetko.com'
+__license__ = 'MIT'
+
 import gzip as _gzip
 from datetime import datetime as _datetime
 from lxml import etree as _etree
 from pytsite import validation as _validation, util as _util
-
-__author__ = 'Alexander Shepetko'
-__email__ = 'a@shepetko.com'
-__license__ = 'MIT'
 
 
 class _FileWriterMixin:
@@ -27,12 +27,13 @@ class _FileWriterMixin:
 class Sitemap(_FileWriterMixin):
     """Sitemap.
     """
+
     def __init__(self):
         """Init.
         """
         self._urls = []
 
-    def add_url(self, url: str, lastmod: _datetime=None, changefreq: str='never', priority: float=0.5):
+    def add_url(self, url: str, lastmod: _datetime = None, changefreq: str = 'never', priority: float = 0.5):
         """Add an URL to the sitemap.
         """
         valid_freq = ('always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never')
@@ -85,12 +86,13 @@ class Sitemap(_FileWriterMixin):
 class Index(_FileWriterMixin):
     """Sitemap Index.
     """
+
     def __init__(self):
         """Init.
         """
         self._urls = []
 
-    def add_url(self, url: str, lastmod: _datetime=None):
+    def add_url(self, url: str, lastmod: _datetime = None):
         """Add an URL to the sitemap index.
         """
         self._urls.append({
